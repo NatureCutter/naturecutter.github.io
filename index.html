@@ -1,14 +1,172 @@
----
-layout: default
-title: Your New Jekyll Site
----
+<!DOCTYPE html>
 
-<div id="home">
-  <h1>Blog</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-  <input type="button" class="button" name="Text 1" value="Drück mich <3">
-</div>
+<head>
+	<title>Yomare</title>
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Lato|Quicksand|Open+Sans' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+	body {
+
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-size: 100px;
+
+		background-image: url("jungle2.png");
+		background-color: white;
+		background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+	}
+	a {
+		text-decoration: none;
+	}
+	.bg {
+		margin-top: -120px;
+	}
+
+	.content {
+		margin-top: -150px;
+		color: white;
+	}
+
+	.button {
+		background-color: yellow;
+		border: 4px solid orange;
+		border-radius: 4px;
+		font-family: 'Open Sans', sans-serif;
+		color: orange;
+		padding: 10px 20px 20px 10px;
+		margin: 10px 0 0 10px;
+		align: middle;
+		width: 400px;
+		height: 100px;
+		opacity: 1;
+	}
+
+	.header {
+		background-color: white;
+		opacity: 0.7;
+		color: black;
+		font-size: 37px;
+		font-family: 'Source Sans Pro', sans-serif;
+		text-align: center;
+		padding: 30px 0;
+		margin-left: 100px;
+		width: 990px;
+		border-radius: 4px;
+	}
+	.header span {
+		padding: 15px 67px;
+		margin-left: 5px;
+		margin-right: 5px;
+		background-color: orange;
+		opacity: 0.6;
+	}
+
+	.footer {
+		font-size: 16px;
+		background-color: white;
+		opacity: 0.5;
+		padding: 30px 70px;
+	}
+
+	.footer p {
+		opacity: 1;
+		text-align: left;
+		margin-left: 40px;
+		line-height: 5px;
+		display: block;
+	}
+
+	.footer * {
+		display: inline-block;
+	}
+
+	#about {
+		padding-left: 200px;
+		padding-top: 30px;
+		padding-bottom: 700px;
+		font-size: 20px;
+	}
+	#about * {
+		background-color: #33CC66 ;
+		text-align: left;
+		margin-left: 20px;
+		border: 3pc solid #33CC66;
+	}
+
+	.Lebenslauf {
+		width: 700px;
+		font-family: 'Quicksand', sans-serif;
+		color: white;
+	}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.button').mouseenter(function() {
+			$(this).fadeTo("fast",0.5);
+		});
+		$('.button').mouseleave(function() {
+			$(this).fadeTo("slow",1);
+		});
+		$('.header span').mouseenter(function() {
+			$(this).fadeTo("fast",1);
+		});
+		$('.header span').mouseleave(function() {
+			$(this).fadeTo("slow",0.6);
+		});
+		$('#Yoga').mouseclicked(function () {
+			
+		})
+	});
+	</script>
+</head>
+
+<!-- ///////////////////////////////////////////////// -->
+
+<body>
+		<div class="header">
+			<a href="#about" class="smoothScroll"><span>About</span></a>
+			<a href="#Yoga" class="smoothScroll"><span>Yoga</span></a>
+			<a href="#Massage" class="smoothScroll"><span>Massage</span></a>
+			<a href="#Reiki" class="smoothScroll"><span>Reiki</span></a>
+		</div>
+		<img src="hintergrund-01.png" align="top" width="1200px" class="bg">
+		<div class="content">
+
+			<span class="button" id="Yoga">Yoga</span>
+			<span class="button" id="Massage">Massage</span>
+			<span class="button" id="Reiki">Reiki</span>
+
+		</div>
+
+		<br><br><br>
+		<img src="schrift.png" align="bottom">
+
+		<div id="about">
+			<img src="IMG_0200.jpg" width="120" align="left">
+			<h1 class="Lebenslauf">Sabine Oppermann</h1>
+			<p class="Lebenslauf">Solem Ipsum da jioas sjidla as sd jidlwai fjaxcnm,xv 
+			nm,vcx weuirpweriu we qwn,m qqwej lsiouc sd c sd cnm,y kjsld i
+			fweuiofew jfjieow apf afpoaiksf fkqnwm,wqe qüpo cyxcyxpoü jilsda
+			dsadasnklkjjklsadsad jiodwq  iqwdjioqwd qwdijoaQ dajio S dsajklas
+			dasda dfipsfiw ewnruewjkr vcbm,.vcb</p>
+		</div>
+
+		<div class="footer">
+			<div>
+				<p>Sabine Oppermann</p>
+				<p>Fischerweg 16 A</p>
+				<p>34497 Korbach</p>
+			</div>
+			<div>
+				<img src="Logo.png" width="70px">
+			</div>
+			
+		</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/smoothscroll.js"></script>
+</body>
