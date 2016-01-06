@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Love
+		</title>
+		
+		<style>
+			* 	{color: blue;
+				font-size: 200%;
+				border: 6px solid black;}
+			h1 	{text-decoration: underline;}
+			h2	{font-size: 400%;
+				text-align: center;}
+		</style>
+
+	
+
+			<video id ="video"></video>
+			
+			<img src="">
+			<canvas style="display:none;"></canvas>
+			
+			<script>
+			/*
+				var video = document.querySelector('video');
+				var canvas = document.querySelector('canvas');
+				var ctx = canvas.getContext('2d');
+				var localMediaStream = null;
+
+			  	function fallback(e) {
+				  //video.src = 'fallbackvideo.webm';
+				}
+
+				function success(stream) {
+				  video.src = window.URL.createObjectURL(stream);
+				}
+
+				if (!navigator.getUserMedia) {
+				  fallback();
+				} else {
+				  navigator.getUserMedia({video: true}, success, fallback);
+				}
+
+			  function snapshot() {
+			    if (localMediaStream) {
+			      ctx.drawImage(video, 0, 0);
+			      // "image/webp" works in Chrome.
+			      // Other browsers will fall back to image/png.
+			      document.querySelector('img').src = canvas.toDataURL('image/webp');
+			    }
+			  }
+
+			  video.addEventListener('click', snapshot, false);
+
+			  
+			  
+			  navigator.getUserMedia = ( navigator.getUserMedia    || 				navigator.webkitGetUserMedia ||
+                       			navigator.mozGetUserMedia ||
+                       			navigator.msGetUserMedia);
+				var aCtx;
+				var analyser;
+				var microphone;
+				if (navigator.getUserMedia) {
+				    navigator.getUserMedia({audio: true}, function(stream) {
+				        aCtx = new webkitAudioContext();
+				        analyser = aCtx.createAnalyser();
+				        microphone = aCtx.createMediaStreamSource(stream);
+				        microphone.connect(analyser);
+				        analyser.connect(aCtx.destination);
+				    }, function (){console.warn("Error getting audio stream from getUserMedia")});
+				};
+
+			*/
+
+				    navigator.getMedia = (
+				        navigator.getUserMedia ||
+				        navigator.webkitGetUserMedia ||
+				        navigator.mozGetUserMedia ||
+				        navigator.msGetUserMedia
+				    );
+				    
+				    if (navigator.getMedia) {    
+				         navigator.getMedia(
+				             {
+				                audio : false,
+				                video : true
+				             },
+				             function (stream) {
+				                if (navigator.mozGetUserMedia) {
+				                     video.mozSrcObject = stream;
+				                } else {
+				                     var vendorURL = window.URL || window.webkitURL;
+				                     video.src = vendorURL.createObjectURL(stream);
+				                }
+
+				                video.play();
+				             },
+				             function (err) {
+				                 alert("OH GOD WHAT HAPPENED!?!??!!! " + err);
+				             }
+				        );
+				    }
+				    else
+				    {
+				        alert("Sorry, your browser does not support WebRTC.");
+				    }
+								
+
+				
+			</script>
+		
+
+			
+
+		</canvas>
+	</head>
+</html>
