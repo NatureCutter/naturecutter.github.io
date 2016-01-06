@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Love
+		</title>
+		
+		<style>
+			* 	{color: blue;
+				font-size: 200%;
+				border: 6px solid black;}
+			h1 	{text-decoration: underline;}
+			h2	{font-size: 400%;
+				text-align: center;}
+		</style>
+
+		<script type="text/javascript">
+				
+				function getRandomPosition(element) {
+					var x = document.body.offsetHeight-element.clientHeight;
+					var y = document.body.offsetWidth-element.clientWidth;
+					var randomX = Math.floor(Math.random()*x);
+					var randomY = Math.floor(Math.random()*y);
+					return [randomX,randomY];
+				}
+
+				window.onload = function() {
+					/*
+					var images = {"dickLuv.png"};
+					for (var i = images.length - 1; i >= 0; i--) {
+						Debug.Log("da");
+						var img = document.createElement('img');
+						img.setAttribute("style", "position:absolute;");
+						img.setAttribute("src", images[i]);
+						document.body.appendChild(img);
+						var xy = getRandomPosition(img);
+						img.style.top = xy[0] + 'px';
+						img.style.left = xy[1] + 'px';
+				};
+				*/
+				var img = document.createElement('img');
+				img.setAttribute("style", "position:absolute;");
+				img.setAttribute("src", "dickLuv.png");
+				document.body.appendChild(img);
+				var xy = getRandomPosition(img);
+				img.style.top = xy[0] + 'px';
+				img.style.left = xy[1] + 'px';
+				img.style.width='109px';
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<p>
+			from my most inner Dreams I fear that you will need me sometime. We are not meant to be together. I hope you know that. You like it here and I am so exhausted. I try to be just fine. Friends stay too long sometimes. Friends become !Friends. 
+		</p>
+	</body>
+</html>
